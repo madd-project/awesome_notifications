@@ -606,7 +606,7 @@ class NotificationController {
 }
 ```
 
-6. Request the user authorization to send local and push notifications (Remember to show a dialog alert to the user before call this request)
+6. Request the user authorization to send local and push notifications (Remember to show a dialog alert to the user before call this request) in your ```void init()``` function.
 
 ```dart
 AwesomeNotifications().isNotificationAllowed().then((isAllowed) {
@@ -626,7 +626,7 @@ AwesomeNotifications().createNotification(
   content: NotificationContent(
       id: 10,
       channelKey: 'basic_channel',
-      actionType: ActionType.Default
+      actionType: ActionType.Default,
       title: 'Hello World!',
       body: 'This is my first notification!',
   )
